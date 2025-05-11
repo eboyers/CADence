@@ -701,3 +701,8 @@ footer {
 @media (max-width: 576px) {
   .stat-number { font-size: 2.4rem; }
 }
+
+.linkedin i {
+  font-size: 1.2rem;
+  color: #0077b5;
+}
