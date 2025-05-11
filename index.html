@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CADence – AI CAD Conversion</title>
+  <title>CADence – AI CAD Conversion</title>
 
   <!-- AOS stylesheet -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Google Font -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"/>
 
@@ -25,9 +25,10 @@
 
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#stats" class="nav-link">Stats</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#projects" class="nav-link">Case Studies</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
@@ -38,50 +39,89 @@
   <section id="home" class="hero" data-aos="fade-up">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-subtitle">Translate. Validate. Deliver.</span>
-        <h1 class="hero-title">AI‑Powered CAD Conversion & Validation</h1>
+        <span class="hero-subtitle">Translate. Validate. Deliver.</span>
+        <h1 class="hero-title">AI‑Powered CAD Conversion & Validation</h1>
         <p class="hero-description">
           CADence automatically converts native CAD files between industry‑leading
           formats, validates every micron of geometry and metadata, and heals
           issues in‑loop so your team can collaborate with any partner without
           costly re‑work.
         </p>
-        <a href="#contact" class="cta-button">Request a Demo</a>
+        <a href="#contact" class="cta-button">Request a Demo</a>
       </div>
     </div>
   </section>
 
+  <!-- ========== Stats ========== -->
+  <section id="stats" class="stats">
+    <div class="container">
+      <h2 class="section-title center" data-aos="fade-up">
+        <span class="accent">Why It Matters</span>
+      </h2>
+  
+      <div class="stats-grid">
+        <!-- Example stat 1 -->
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="stat-number">87%</span>
+          <p class="stat-caption">
+            <b>of industrial companies lose design intelligence during CAD file migrations</b>
+            <br><span class="stat-source">– <i>MobilityEngineeringTech.com, 2023</i></span>
+          </p>
+
+        </div>
+  
+        <!-- Example stat 2 -->
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <span class="stat-number">$30 – 50M</span>
+          <p class="stat-caption">
+            <b>annual losses in large manufacturing organizations are attributable to inconsistent CAD data across divisions and suppliers</b>
+            <br><span class="stat-source">– <i>migrationscadinterop.com</i></span>
+          </p>
+        </div>
+
+        <!-- Example stat 2 -->
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="150">
+          <span class="stat-number">65%</span>
+          <p class="stat-caption">
+          <b>65% of engineering projects report delays from CAD format incompatibility</b>
+          <br><span class="stat-source">– <i>Siemens PLM whitepaper on multi-CAD workflows, 2021</i></span>
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- ========== Services ========== -->
   <section id="services" class="services">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">What We Do</h2>
+      <h2 class="section-title" data-aos="fade-up">What We Do</h2>
 
       <div class="services-grid">
         <div class="service-card" data-aos="fade-up" data-aos-delay="0">
           <div class="service-icon">🔄</div>
-          <h3 class="service-title">Format Translation</h3>
+          <h3 class="service-title">Format Translation</h3>
           <p class="service-description">
             Fast, loss‑less conversion between CATIA, SOLIDWORKS, NX, Creo, STEP,
-            IGES and more, all without opening the native CAD app.
+            IGES and more, all without opening the native CAD app.
           </p>
         </div>
 
         <div class="service-card" data-aos="fade-up" data-aos-delay="150">
           <div class="service-icon">✅</div>
-          <h3 class="service-title">Automated Validation</h3>
+          <h3 class="service-title">Automated Validation</h3>
           <p class="service-description">
             AI‑driven geometry and metadata checks guarantee design intent
-            survives translation—detecting unit mismatches, missing features &
+            survives translation by detecting unit mismatches, missing features, and
             assembly drift.
           </p>
         </div>
 
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <div class="service-icon">🛠</div>
-          <h3 class="service-title">Geometric Healing</h3>
+          <h3 class="service-title">Geometric Healing</h3>
           <p class="service-description">
             Automatic stitching and gap‑filling repairs imperfect B‑Rep models
-            before they hit the shop floor or simulation pipeline.
+            before they hit the shop floor or simulation pipeline.
           </p>
         </div>
       </div>
@@ -91,125 +131,71 @@
   <!-- ========== About ========== -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">About CADence</h2>
-
-      <div class="about-content">
-        <div class="about-text" data-aos="fade-right">
-          <p>Founded in 2025 by two Stanford students, 
-             CADence exists to eliminate the friction of multi‑CAD
-             collaboration. Our platform combines state‑of‑the‑art geometry 
-             kernels with large language models to iteratively refine each 
-             translation until it is <strong>truly</strong> indistinguishable from the 
-             original. Whether you’re a Tier‑1 supplier, a contract manufacturer, 
-             or a robotics startup, CADence keeps your digital thread intact across 
-             every tool in your stack.</p>
-
-          <div class="stats-container">
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
-              <div class="stat-number">8</div>
-              <div class="stat-label">Formats Supported</div>
-            </div>
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="150">
-              <div class="stat-number">5k+</div>
-              <div class="stat-label">Models Processed</div>
-            </div>
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-              <div class="stat-number">0.01 mm</div>
-              <div class="stat-label">Geom Deviation</div>
-            </div>
-          </div>
+      <div class="about-card glass-card" data-aos="fade-up">
+        <!-- Copy/text column -->
+        <div class="about-text">
+          <h2 class="section-title">About CADence</h2>
+          <p>
+            Founded in 2025 by two Stanford students, CADence exists to eliminate
+            the friction of multi‑CAD collaboration. Our platform combines
+            state‑of‑the‑art geometry kernels with large language models to
+            iteratively refine each translation until it is <strong>truly</strong>
+            indistinguishable from the original. Whether you’re a Tier‑1
+            supplier, a contract manufacturer, or a robotics startup, CADence
+            keeps your digital thread intact across every tool in your stack.
+          </p>
         </div>
-
-        <div class="about-image" data-aos="fade-left" data-aos-delay="200">
-          <img src="https://cdn.artec3d.com/styles/1288/s3/block-images/geomagic-for-solidworks-main-features.jpg?VersionId=lNhmpOZuE3VIYGqZPStVlZvm.2jL0naC&itok=MVVl-ej3" alt="Cadence team at work" />
+  
+        <!-- Image column -->
+        <div class="about-image">
+          <img
+            src="https://www.sculpteo.com/blog/wp-content/uploads/2015/10/Micro-Turbine.png"
+            alt="Sample CAD model in CADence"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== Case Studies ========== -->
-  <section id="projects" class="projects">
+  <!-- ========== Team ========== -->
+  <section id="team" class="team">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Case Studies</h2>
 
-      <article class="project-card" data-aos="zoom-in-up">
-        <div class="project-image">
-          <img src="https://www.sculpteo.com/blog/wp-content/uploads/2015/10/Micro-Turbine.png" alt="Aerospace Supplier" />
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Aerospace Supplier Workflow</h3>
-          <p class="project-description">
-            CADence replaced a 6‑hour manual CATIA→STEP pipeline with a
-            fully‑automated loop, cutting turnaround to 15 minutes and
-            achieving &lt;0.02 mm deviation across 240 unique parts.
+      <h2 class="section-title center" data-aos="fade-up">
+        <span class="accent">Meet the Team</span>
+      </h2>
+
+      <div class="team-grid">
+        <!-- Founder 1 -->
+        <article class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <img class="team-photo" src="ethan.png" alt="Ethan Boyers" />
+          <h3 class="team-name">Ethan Boyers</h3>
+          <p class="team-role">CTO</p>
+          <p class="team-bio">
+            Ethan, co-founder and CTO of CADence, became obsessed with building tools that fix broken 
+            technical workflows while researching AI safety and infrastructure at Stanford's AI Lab. He realized 
+            how AI could be applied to everyday bottlenecks that slow down engineers. At CADence, he’s focused on bringing AI-powered structure and 
+            intelligence to CAD conversion, helping engineers spend less time fixing files and more 
+            time solving real design problems.
           </p>
-          <div class="project-tags">
-            <span class="project-tag">CATIA V5</span>
-            <span class="project-tag">STEP AP242</span>
-            <span class="project-tag">Validation API</span>
-          </div>
-        </div>
-      </article>
+          <a class="linkedin" href="https://www.linkedin.com/in/ethan-boyers/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </article>
 
-      <article class="project-card" data-aos="zoom-in-up" data-aos-delay="150">
-        <div class="project-image">
-          <img src="https://embed-ssl.wistia.com/deliveries/2550210bb188d54fd41c5b5b4aa28969.webp?image_crop_resized=1280x720" alt="Automotive Tier‑1" />
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Automotive Tier‑1 Migration</h3>
-          <p class="project-description">
-            Migrated 12,000 legacy IGES files to native NX with geometry healing
-            and metadata preservation, unlocking downstream simulation and
-            additive manufacturing.
+        <!-- Founder 2 -->
+        <article class="team-card" data-aos="fade-up" data-aos-delay="150">
+          <img class="team-photo" src="jonathan.png" alt="Jonathan Tyshler" />
+          <h3 class="team-name">Jonathan Tyshler</h3>
+          <p class="team-role">CEO</p>
+          <p class="team-bio">
+            Jonathan, co-founder and CEO of CADence, spent two years working at an 
+            aviation engineering firm where he saw firsthand how much time and money
+            were lost due to broken CAD conversions between suppliers and OEMs. Watching 
+            engineers manually fix models and rebuild parts just to meet formatting or 
+            compliance requirements sparked the idea for a better solution. At CADence, 
+            he’s building the platform he wishes his team had.
           </p>
-          <div class="project-tags">
-            <span class="project-tag">IGES</span>
-            <span class="project-tag">NX 1953</span>
-            <span class="project-tag">Geometry Healing</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
-        <div class="project-image">
-          <img src="https://restoric.co.uk/wp-content/uploads/2018/04/3D-CAD-Model.jpg" alt="CAD Car model" />
-        </div>
-        <div class="project-content">
-          <h3 class="project-title">Medical Device Compliance</h3>
-          <p class="project-description">
-            Ensured FDA traceability by validating every STEP export against the
-            SOLIDWORKS master model, generating audit‑ready deviation reports
-            in seconds.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">SOLIDWORKS</span>
-            <span class="project-tag">STEP Validation</span>
-            <span class="project-tag">Regulatory</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ========== Testimonials ========== -->
-  <section class="testimonials">
-    <div class="container">
-      <h2 class="section-title">Testimonials</h2>
-
-      <div class="testimonial-container">
-        <figure class="testimonial-item active">
-          <blockquote class="testimonial-text">
-            “CADence saved my engineers hours of work.”
-          </blockquote>
-          <figcaption>
-            <span class="testimonial-author">Pavel Govzman</span><br />
-            <span class="testimonial-position">CEO, SPIA Technik</span>
-          </figcaption>
-        </figure>
-
-        <div class="testimonial-controls">
-          <div class="testimonial-dot active" data-index="0"></div>
-        </div>
+          <a class="linkedin" href="https://www.linkedin.com/in/jonathan-tyshler/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </article>
       </div>
     </div>
   </section>
@@ -218,7 +204,7 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="contact-content">
-        <h2 class="contact-heading">Let’s Talk CAD</h2>
+        <h2 class="contact-heading">Let’s Talk CAD</h2>
         <p class="contact-description">
           Ready to eliminate translation headaches? Reach out for inquiries 
           tailored to your workflow. 
@@ -237,7 +223,7 @@
           <div class="form-group">
             <textarea name="message" class="form-input form-textarea" placeholder="Tell us about your CAD workflow…" required></textarea>
           </div>
-          <button type="submit" class="submit-button">Send Message</button>
+          <button type="submit" class="submit-button">Send Message</button>
         </form>
       </div>
     </div>
@@ -247,12 +233,12 @@
   <footer data-aos="fade-up">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2025 CADence • All rights reserved</p>
+        <p>&copy; 2025 CADence • All rights reserved</p>
       </div>
     </div>
   </footer>
 
-  <!-- Back‑to‑top -->
+  <!-- Back-to-top -->
   <button class="back-to-top" id="backToTop">↑</button>
 
   <!-- Main script -->
