@@ -42,28 +42,22 @@ backToTopBtn.addEventListener("click", () =>
 );
 
 /* ========== Contact Form ========== */
-const form       = document.getElementById("contactForm");
-const statusBox  = document.getElementById("formStatus");
-const submitBtn  = form.querySelector(".submit-button");
+const form      = document.getElementById("contactForm");
+const statusBox = document.getElementById("formStatus");
+const submitBtn = form.querySelector(".submit-button");
 
-emailjs.init("5HhT0MvIWc0BTo9L4");           // keep this as‑is
+emailjs.init("5HhT0MvIWc0BTo9L4");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // UI: disable button & show spinner text
   submitBtn.disabled  = true;
   submitBtn.textContent = "Sending…";
 
   emailjs.sendForm("service_d7p0vlr", "template_ym3afwg", form)
     .then(() => {
-      // Hide the form fields
-      form.classList.add("hidden");
-
-      // Show success banner
+      form.style.display = "none";                       // only the form
       showStatus("Thanks for reaching out! We'll reply shortly.", true);
-
-      // Reset form for next time
       form.reset();
     })
     .catch((err) => {
@@ -76,9 +70,7 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-/* helper */
-function showStatus(message, isSuccess) {
-  statusBox.textContent = message;
-  statusBox.className   = `form-status ${isSuccess ? "success" : "error"} show`;
-  statusBox.classList.remove("hidden");
+function showStatus(msg, ok) {
+  statusBox.textContent = msg;
+  statusBox.className   = `form-status ${ok ? "success" : "error"} show`;
 }
