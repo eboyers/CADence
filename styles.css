@@ -468,6 +468,38 @@ header {
   resize: vertical;
 }
 
+/* ===== Contact‑form status banner ===== */
+.form-status {
+  margin-top: 1.25rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;                 /* hidden by default – revealed via JS */
+  transform: translateY(12px);
+}
+
+/* Success + Error colour themes */
+.form-status.success {
+  background: linear-gradient(135deg, #1ef8b9 0%, #38e6ff 100%);
+  color: #01231e;
+}
+
+.form-status.error {
+  background: linear-gradient(135deg, #ff6161 0%, #ffa36b 100%);
+  color: #330000;
+}
+
+/* Utility */
+.hidden { display: none !important; }
+.form-status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Footer */
 footer {
   background: #0a192f;

@@ -42,28 +42,43 @@ backToTopBtn.addEventListener("click", () =>
 );
 
 /* ========== Contact Form ========== */
-const form = document.getElementById("contactForm");
-const submitBtn = form.querySelector(".submit-button");
+const form       = document.getElementById("contactForm");
+const statusBox  = document.getElementById("formStatus");
+const submitBtn  = form.querySelector(".submit-button");
 
-emailjs.init("5HhT0MvIWc0BTo9L4");
+emailjs.init("5HhT0MvIWc0BTo9L4");           // keep this as‑is
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  submitBtn.disabled = true;
+
+  // UI: disable button & show spinner text
+  submitBtn.disabled  = true;
   submitBtn.textContent = "Sending…";
 
-  emailjs
-    .sendForm("service_d7p0vlr", "template_ym3afwg", form)
+  emailjs.sendForm("service_d7p0vlr", "template_ym3afwg", form)
     .then(() => {
-      alert("Thanks for reaching out! We'll reply shortly.");
+      // Hide the form fields
+      form.classList.add("hidden");
+
+      // Show success banner
+      showStatus("Thanks for reaching out! We'll reply shortly.", true);
+
+      // Reset form for next time
       form.reset();
     })
     .catch((err) => {
       console.error("EmailJS error:", err);
-      alert("Oops — something went wrong. Please try again or email us directly.");
+      showStatus("Uh‑oh! Something went wrong. Please try again.", false);
     })
     .finally(() => {
-      submitBtn.disabled = false;
+      submitBtn.disabled  = false;
       submitBtn.textContent = "Send Message";
     });
 });
+
+/* helper */
+function showStatus(message, isSuccess) {
+  statusBox.textContent = message;
+  statusBox.className   = `form-status ${isSuccess ? "success" : "error"} show`;
+  statusBox.classList.remove("hidden");
+}
